@@ -29,7 +29,7 @@ app.get('/',(req,resp)=>{
 })
 
 //serve static resource
-addEventListener.use("/static", express.static(_dirname+"static"))
+app.use("/static", express.static(_dirname+"/static"))
 //Start our web application
 app.listen(port,()=> {
     console.info(`Starting application on the port ${port} at ${new Date()}`)
